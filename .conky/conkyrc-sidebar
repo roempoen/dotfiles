@@ -1,0 +1,50 @@
+##############################################
+# Settings
+##############################################
+background yes
+use_xft yes
+xftfont GE Inspira:size 16
+xftalpha 1
+update_interval 60.0
+total_run_times 0
+own_window yes
+own_window_transparent no
+own_window_type desktop
+own_window_argb_visual yes
+own_window_argb_value 160
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+double_buffer yes
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+default_color ffffff
+default_shade_color 000000
+default_outline_color 828282
+alignment bottom_left
+gap_x 12
+gap_y 120
+no_buffers yes
+uppercase no
+cpu_avg_samples 2
+override_utf8_locale no
+##############################################
+#  Output
+##############################################
+TEXT
+${font GE Inspira:bold:size=36}$nodename_short
+${voffset -25}${font GE Inspira:bold:size 16}${time %l:%M %p on %d %B %Y}
+$hr
+${color #9d5353}uptime${offset 22}${color #FFFFFF}$uptime_short
+${color #9d5353}version${offset 20}${color #FFFFFF}$kernel
+${color #9d5353}RAM${offset 43}${color #FFFFFF}$mem/$memmax
+${color #9d5353}swap${offset 35}${color #FFFFFF}$swap/$swapmax
+${color #9d5353}/${offset 68}${color #FFFFFF}${fs_used /}/${fs_size /}
+${color #9d5353}/home${offset 25}${color #FFFFFF}${fs_used /home}/${fs_size /home}
+${color #9d5353}SSID${offset 41}${color #FFFFFF}${wireless_essid wlan0}
+${color #9d5353}band${offset 35}${color #FFFFFF}${wireless_bitrate wlan0}
+${color #9d5353}status${offset 27}${color #FFFFFF}$battery
+${color #9d5353}time${offset 42}${color #FFFFFF}$battery_time
+${color #9d5353}desktop${offset 14}${color #FFFFFF}$desktop_name
+$hr
+Powered by CrunchBang \#!

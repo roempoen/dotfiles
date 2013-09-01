@@ -1,0 +1,37 @@
+##############################################
+# Settings
+##############################################
+background yes
+use_xft yes
+xftfont GE Inspira:bold:size=10
+xftalpha 1
+update_interval 10.0
+total_run_times 0
+own_window yes
+own_window_transparent no
+own_window_type desktop
+own_window_argb_visual yes
+own_window_argb_value 200
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+double_buffer yes
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+default_color ffffff
+default_shade_color 000000
+default_outline_color 828282
+alignment bottom_left
+gap_x 10
+gap_y 10
+no_buffers yes
+uppercase no
+cpu_avg_samples 2
+override_utf8_locale no
+text_buffer_size 2048
+max_user_text 65000
+##############################################
+#  Output
+##############################################
+TEXT
+${color #9d5353}music: ${color #FFFFFF} ${exec cmus-now-playing.sh}

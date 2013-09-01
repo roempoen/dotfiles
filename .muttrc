@@ -1,0 +1,85 @@
+################################
+# IMAP + SMTP + NAME information
+################################
+# This is all fake, unless somebody actually created this account
+# with this password -- which would be hilarious.
+set imap_user = "skroob@gmail.com"
+set imap_pass = "12345"
+set smtp_url = "smtp://skroob@smtp.gmail.com:587/"
+set smtp_pass = "12345"
+set from = "skroob@gmail.com"
+set realname = "President Skroob"
+################################
+
+###########################
+# SETTING SENSIBLE DEFAULTS
+###########################
+set folder = "imaps://imap.gmail.com:993"
+set spoolfile = "+INBOX"
+set postponed = "+[GMail]/Drafts"
+set imap_check_subscribed
+set hostname = gmail.com
+set mail_check = 120
+set timeout = 300
+set imap_keepalive = 300
+###########################
+
+########################
+# MACROS FOR GMAIL TASKS
+########################
+macro index,pager y "<enter-command>unset trash\n <delete-message>" "Gmail archive message"
+macro index,pager d "<enter-command>set trash=\"imaps://imap.googlemail.com/[GMail]/Bin\"\n <delete-message>" "Gmail delete message"
+macro index,pager gi "<change-folder>=INBOX<enter>" "Go to inbox"
+macro index,pager ga "<change-folder>=[Gmail]/All<quote-char> Mail<enter>" "Go to all mail"
+macro index,pager gs "<change-folder>=[Gmail]/Starred<enter>" "Go to starred messages"
+macro index,pager gd "<change-folder>=[Gmail]/Drafts<enter>" "Go to drafts"
+########################
+
+##################################
+# SORTING BY THREADS, NEWEST FIRST
+##################################
+set sort = 'threads'
+set sort_aux = 'reverse-last-date-received'
+##################################
+
+###############################
+# HIDE MOST OF THE EMAIL HEADER
+###############################
+ignore *
+unignore from: date subject to cc
+unignore x-mailing-list: posted-to:
+unignore x-mailer:
+hdr_order Date From To Cc
+###############################
+
+########################
+# MISCELLANEOUS SETTINGS
+########################
+set markers = no                          # We don't need an indicator to see that a line is wrapped
+set pager_index_lines = 5                 # A mini index to tell us where we're at in the mailbox folder when reading emails
+set header_cache=~/.mutt/cache/headers    # Cache headers for faster access
+set message_cachedir=~/.mutt/cache/bodies # Cache bodies for faster access
+set certificate_file=~/.mutt/certificates # Tell Mutt where to save certs
+set move = no                             # Don't move messages after reading them
+set include                               # Include original message in reply
+set auto_tag = yes                        # Because it just makes sense
+unset record                              # With Gmail all mail goes to the same place
+alternative_order text/plain text/html *  # We'd like to see plain text before anything else
+auto_view text/html                       # Use lynx/links/etc. to dump html to text
+########################
+
+#---- Mutt Colors for White Background -------
+color    hdrdefault    white           default   
+color    quoted        red             default   
+color    signature     brightwhite     default   
+color    indicator     brightwhite     default
+color    attachment    white           default
+color    error         red             default   
+color    message       white           default   
+color    search        brightwhite     default
+color    status        brightwhite     default
+color    tree          red             default   
+color    normal        white           default   
+color    tilde         green           default   
+color    bold          brightwhite     default   
+color    markers       red             default
