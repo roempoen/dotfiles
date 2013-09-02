@@ -1,14 +1,12 @@
 ################################
 # IMAP + SMTP + NAME information
 ################################
-# This is all fake, unless somebody actually created this account
-# with this password -- which would be hilarious.
-set imap_user = "skroob@gmail.com"
-set imap_pass = "12345"
-set smtp_url = "smtp://skroob@smtp.gmail.com:587/"
-set smtp_pass = "12345"
-set from = "skroob@gmail.com"
-set realname = "President Skroob"
+set imap_user = "mgraybosch@gmail.com"
+set imap_pass = "p3n1sChrist"
+set smtp_url = "smtp://mgraybosch@smtp.gmail.com:587/"
+set smtp_pass = "p3n1sChrist"
+set from = "mgraybosch@gmail.com"
+set realname = "Matthew Graybosch"
 ################################
 
 ###########################
@@ -39,7 +37,11 @@ macro index,pager gd "<change-folder>=[Gmail]/Drafts<enter>" "Go to drafts"
 # SORTING BY THREADS, NEWEST FIRST
 ##################################
 set sort = 'threads'
+set strict_threads = 'yes'
 set sort_aux = 'reverse-last-date-received'
+unset collapse_unread
+bind index - collapse-thread
+bind index _ collapse-all
 ##################################
 
 ###############################
