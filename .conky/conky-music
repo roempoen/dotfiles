@@ -34,4 +34,4 @@ max_user_text 65000
 #  Output
 ##############################################
 TEXT
-${color #9d5353}music: ${color #FFFFFF} ${exec cmus-now-playing.sh}
+${iconv_start UTF-8 ISO_8859-1}${color #9d5353}music: ${color #FFFFFF} ${exec cmus-now-playing.sh}${iconv_stop}

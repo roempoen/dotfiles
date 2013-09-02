@@ -34,4 +34,4 @@ max_user_text 65000
 #  Output
 ##############################################
 TEXT
-$nodename_short >> ${color #9d5353}uptime: ${color #FFFFFF}$uptime ${color #9d5353}load: ${color #FFFFFF}$loadavg ${color #9d5353}CPU: ${color #FFFFFF}$cpu% ${color #9d5353}RAM: ${color #FFFFFF}$memperc% ${color #9d5353}Swap: ${color #FFFFFF}$swapperc% ${color #9d5353}wifi: ${color #FFFFFF}${wireless_essid wlan0} ${color #9d5353}battery: ${color #FFFFFF}$battery ${color #9d5353}desktop: ${color #FFFFFF}$desktop_name >> ${time %d %B %Y %l:%M %p}
+${iconv_start UTF-8 ISO_8859-1}$nodename_short « ${color #9d5353}uptime: ${color #FFFFFF}$uptime ${color #9d5353}load: ${color #FFFFFF}$loadavg ${color #9d5353}CPU: ${color #FFFFFF}$cpu% ${color #9d5353}RAM: ${color #FFFFFF}$memperc% ${color #9d5353}Swap: ${color #FFFFFF}$swapperc% ${color #9d5353}wifi: ${color #FFFFFF}${wireless_essid wlan0} ${color #9d5353}battery: ${color #FFFFFF}$battery ${color #9d5353}desktop: ${color #FFFFFF}$desktop_name » ${time %d %B %Y %l:%M %p}${iconv_stop}
