@@ -171,6 +171,9 @@ fset powermetal=genre="*Power Metal*"
 fset prog=genre="Progressive Rock"
 fset progmetal=genre="Progressive Metal"
 fset rock=genre="Rock"
+fset hardrock=genre="Hard Rock"
 fset symphmetal=genre="Symphonic Metal"
-fset thrash=genre="Thrash Metal"
-factivate instrumental
+fset altmetal=genre="Alternative Metal"
+fset altrock=genre="Alternative Rock"
+fset lordi=artist="Lordi"
+factivate
